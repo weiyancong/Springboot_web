@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Alibaba</h1>
+    测试Rest风格
+    <form action="/user" method="get">
+        <input type="submit" value="get提交">
+    </form>
+    <form action="/user" method="post">
+        <input type="submit" value="post提交">
+    </form>
+    <form action="/user" method="post">
+        <input type="hidden" name="_method" value="delete">
+        <input type="submit" value="delete提交">
+    </form>
+    <form action="/user" method="post">
+        <input type="hidden" name="_method" value="PUT">
+        <input type="submit" value="put提交">
+    </form>
+<hr/>
+测试基本注解：
+<ul>
+    <a href="/car/33/owner/李四?age=23&inters=basketball&inters=game">username</a>
+    <li>@PathVariable(路径变量)</li>
+    <li>@RequestHeader（获取请求头）</li>
+    <li>@RequestParam（获取请求参数）</li>
+    <li>@CookieValue（获取cookiez值）</li>
+    <li>@RequestAttribute（获取request域属性）</li>
+    <li>@RequestBody（获取请求体）</li>
+    <li>@MatrixVariable（矩阵变量）</li>
+</ul>
+<a href="/cars/sell;low=34;brand=byd,audi,yd">@MatrixVariable(矩阵变量)</a>
+<a href="/cars/sell;low=34;brand=byd,brand=audi;brand=yd">@MatrixVariable(矩阵变量)</a>
+<a href="/cars/1;age=20/2;age=10">@MatrixVariable(矩阵变量)/boss/{bossId}/{empId}</a>
+<br/>
+<form action="/save" method="post">
+    测试@RequestBody获取数据<br/>
+    用户名:<input name="userName"/><br/>
+    邮箱：<input name="email"/><br/>
+    <input type="submit" value="提交"/>
+</form>
+<ol>
+    <li>矩阵变量需要在springboot中手动开启</li>
+    <li>根据RFC3986的规范，矩阵变量应当绑定在路径变量中！</li>
+    <li>若是有多个矩阵变量，应当使用英文符号;进行分割。</li>
+    <li>若是一个矩阵变量有多个值，应当使用英文符号，进行分割，或之明明多个重复的key即可。</li>
+</ol>
+<hr/>
+测试封装pojo：
+<form action="/saveuser" method="post">
+    姓名：<input name="userName" value="zhangsan"/><br/>
+    年龄：<input name="age" value="18"/><br/>
+    生日：<input name="birth" value="2019/12/10"/><br/>
+    宠物姓名：<input name="pet.name" value="阿猫"/><br/>
+    宠物年龄：<input name="pet.age" value="5"/><br/>
+    <input type="submit" value="保存"/>
+</form>
+</body>
+</html>
