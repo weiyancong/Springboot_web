@@ -15,6 +15,7 @@ public class SpringbootWebApplication
         System.out.println("第四次提交！");
         System.out.println("master Test！");
         System.out.println("hot-fix Test！");
+        System.out.println("push Test！");
     }
 
 }
