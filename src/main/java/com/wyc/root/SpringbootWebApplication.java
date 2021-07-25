@@ -17,6 +17,7 @@ public class SpringbootWebApplication
         System.out.println("hot-fix Test！");
         System.out.println("push Test！");
         System.out.println("pull Test！");
+        System.out.println("push GitEE Test！");
         System.out.println("pull GitEE Test！");
     }
 
