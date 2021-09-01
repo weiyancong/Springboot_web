@@ -95,7 +95,7 @@ public class PhoneCode
         for(int i=0;i<6;i++)
         {
             randomStr +=  random.nextInt(10);
-        }åå
+        }
        return randomStr;
     }
 }
