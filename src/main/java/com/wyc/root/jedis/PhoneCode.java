@@ -6,6 +6,9 @@ import redis.clients.jedis.Jedis;
 
 import java.util.Random;
 
+/**
+*  验证码校验
+*/
 public class PhoneCode
 {
     public static void main(String[] args)
@@ -92,7 +95,7 @@ public class PhoneCode
         for(int i=0;i<6;i++)
         {
             randomStr +=  random.nextInt(10);
-        }
+        }åå
        return randomStr;
     }
 }
